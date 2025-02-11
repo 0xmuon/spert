@@ -1,0 +1,32 @@
+.home {
+    padding: 2rem;
+    text-align: center;
+}
+
+.conference-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.logo-container {
+    flex: 1;
+}
+
+.conference-info {
+    flex: 2;
+}
+
+h1, h2, h3 {
+    margin: 0.5rem 0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 0.5rem 0;
+} 
