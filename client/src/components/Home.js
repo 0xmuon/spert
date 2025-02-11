@@ -24,8 +24,8 @@ function Home() {
 
         <div className="logo-container">
           <img 
-            src="https://i.ibb.co/DgPtSdG6/svnit-logo.png" // Replace with the actual URL of the second logo
-            alt="svnit-logo" 
+            src="https://i.ibb.co/DgPtSdG6/svnit-logo.png" 
+            alt="SVNIT Logo" 
             className="conference-logo" 
             width="400" 
             height="150"
