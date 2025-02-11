@@ -5,33 +5,36 @@ function Home() {
   return (
     <div className="home">
       <div className="conference-header">
-        <div className="logo-container left">
+        <div className="logo-container">
           <img 
-            src='client/assets/SPERT2025.png'
+            src="https://i.ibb.co/JWhJB86S/SPERT2025.png" 
             alt="SPERT 2025 Logo" 
             className="conference-logo" 
+            width="400" 
+            height="150"
           />
         </div>
         
         <div className="conference-info">
-          <h1>IEEE International Conference </h1>
-          <h2>IEEE International Conference on Smart Power, Energy, Renewables, and Transportation (IEEE-SPERT) 2025</h2>
-          <h3>19 Dec - 21 Dec, 2025</h3>
-          <h3>Surat, Gujarat, INDIA</h3>
+          <h1 className="conference-title">IEEE International Conference</h1>
+          <h2 className="conference-subtitle">IEEE International Conference on Smart Power, Energy, Renewables, and Transportation (IEEE-SPERT) 2025</h2>
+          <h3 className="conference-dates">19 Dec - 21 Dec, 2025</h3>
+          <h3 className="conference-location">Surat, Gujarat, INDIA</h3>
         </div>
 
-        {/* Remove NIT_SURAT.svg logo */}
-        {/* <div className="logo-container right">
+        <div className="logo-container">
           <img 
-            src={process.env.PUBLIC_URL + '/assets/NIT_SURAT.svg'} 
-            alt="NIT Surat Logo" 
-            className="institution-logo" 
+            src="https://i.ibb.co/DgPtSdG6/svnit-logo.png" // Replace with the actual URL of the second logo
+            alt="svnit-logo" 
+            className="conference-logo" 
+            width="400" 
+            height="150"
           />
-        </div> */}
+        </div>
       </div>
       
-      <h2>Tracks:</h2>
-      <ul>
+      <h2 className="tracks-title">Tracks:</h2>
+      <ul className="track-list">
         <li>Power converters for Integration of Renewable Energy into the grid, its control and management</li>
         <li>Energy Management and Storage Technologies</li>
         <li>Charging Systems and Infrastructure for Electrical transportation</li>
@@ -41,8 +44,24 @@ function Home() {
         <li>AI, Big data and Cybersecurity for power, energy and transportation</li>
         <li>Electricity market and regulatory framework</li>
       </ul>
+
+      <div className="conference-description">
+        <h2 className="description-title">Conference Overview</h2>
+        <p>
+          The International Conference on Smart Power, Energy, Renewables, and Transportation aims to explore the integration of advanced energy systems, renewable energy sources, and sustainable transportation solutions. 
+        </p>
+        <p>
+          Topics include smart grid technologies, energy storage, IoT applications in power systems, and the role of artificial intelligence in optimizing energy distribution. The conference also covers renewable energy advancements in solar, wind, and biofuels, alongside the evolution of electric and hybrid vehicles.
+        </p>
+        <p>
+          It highlights sustainable mobility, smart transportation systems, and the environmental impacts of energy technologies. Discussions will focus on policy, regulation, and economic strategies to accelerate the transition toward a cleaner, more efficient energy and transportation future.
+        </p>
+        <p>
+          The event provides a platform for collaboration between experts from academia, industry, and government to drive innovations in these critical sectors.
+        </p>
+      </div>
     </div>
   );
 }
 
-export default Home; 
+export default Home;

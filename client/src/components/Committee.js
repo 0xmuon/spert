@@ -1,37 +1,50 @@
 import React from 'react';
 import CommitteeDetail from './CommitteeDetail';
-import Home from './Home';
-import Title from './Title';
+import './Committee.css';
 
-function Committee() {
+const committeeMembers = [
+  {
+    post: 'Chief Patron',
+    members: [
+      { name: 'Dr. B.K Sethi', college: 'Assistant Professor, SVNIT, Surat' },
+      { name: 'Dr. B.K Sethi', college: 'Assistant Professor, SVNIT, Surat' },
+      { name: 'Dr. B.K Sethi', college: 'Assistant Professor, SVNIT, Surat' },
+    ],
+  },
+  {
+    post: 'Patron',
+    members: [
+      { name: 'Dr. A. N. Other', college: 'Some College' },
+    ],
+  },
+  {
+    post: 'Honorary Chairs',
+    members: [
+      { name: 'Dr. C. D. Example', college: 'Another College' },
+    ],
+  },
+  // Add more categories and members as needed
+];
 
+export default function Committee() {
   return (
-    <div>
-      <Home/>
-      <Title titleName= 'Conference Committee Members'/>
-      <CommitteeDetail MemberPost={'Cheif Patron'} MemberName={'DR B.K Sethi'} MemberPostCollege={'Assistant Proffesor, SVNIT, Surat'}/>
-      <CommitteeDetail MemberPost={'Patron'} MemberName={'DR B.K Sethi'} MemberPostCollege={'Assistant Proffesor, SVNIT, Surat'}/>
-      <CommitteeDetail MemberPost={'Honorary Chairs'} MemberName={'DR B.K Sethi'} MemberPostCollege={'Assistant Proffesor, SVNIT, Surat'}/>
-      <CommitteeDetail MemberPost={'General Chairs'} MemberName={'DR B.K Sethi'} MemberPostCollege={'Assistant Proffesor, SVNIT, Surat'}/>
-      <CommitteeDetail MemberPost={'Organizing Chairs'} MemberName={'DR B.K Sethi'} MemberPostCollege={'Assistant Proffesor, SVNIT, Surat'}/>
-      <CommitteeDetail MemberPost={'Conference Secretaries'} MemberName={'DR B.K Sethi'} MemberPostCollege={'Assistant Proffesor, SVNIT, Surat'}/>
-      <CommitteeDetail MemberPost={'Finance Chair'} MemberName={'DR B.K Sethi'} MemberPostCollege={'Assistant Proffesor, SVNIT, Surat'}/>
-      <CommitteeDetail MemberPost={'Technical Program Committee Chairs'} MemberName={'DR B.K Sethi'} MemberPostCollege={'Assistant Proffesor, SVNIT, Surat'}/>
-      <CommitteeDetail MemberPost={'Publication Chairs'} MemberName={'DR B.K Sethi'} MemberPostCollege={'Assistant Proffesor, SVNIT, Surat'}/>
-      <CommitteeDetail MemberPost={'Sponsorship Chairs'} MemberName={'DR B.K Sethi'} MemberPostCollege={'Assistant Proffesor, SVNIT, Surat'}/>
-      <CommitteeDetail MemberPost={'WIE Chairs'} MemberName={'DR B.K Sethi'} MemberPostCollege={'Assistant Proffesor, SVNIT, Surat'}/>
-      <CommitteeDetail MemberPost={'Hospitality Chairs'} MemberName={'DR B.K Sethi'} MemberPostCollege={'Assistant Proffesor, SVNIT, Surat'}/>
-      <CommitteeDetail MemberPost={'Tutorial and Workshop Chairs'} MemberName={'DR B.K Sethi'} MemberPostCollege={'Assistant Proffesor, SVNIT, Surat'}/>
-      <CommitteeDetail MemberPost={'Student Activity & Awards Chairs'} MemberName={'DR B.K Sethi'} MemberPostCollege={'Assistant Proffesor, SVNIT, Surat'}/>
-      <CommitteeDetail MemberPost={'Publicity Chairs'} MemberName={'DR B.K Sethi'} MemberPostCollege={'Assistant Proffesor, SVNIT, Surat'}/>
-      <CommitteeDetail MemberPost={'Special Session Chairs'} MemberName={'DR B.K Sethi'} MemberPostCollege={'Assistant Proffesor, SVNIT, Surat'}/>
-      <CommitteeDetail MemberPost={'Steering Committee Chair'} MemberName={'DR B.K Sethi'} MemberPostCollege={'Assistant Proffesor, SVNIT, Surat'}/>
-      <CommitteeDetail MemberPost={'Institute Advisory Committee Chairs'} MemberName={'DR B.K Sethi'} MemberPostCollege={'Assistant Proffesor, SVNIT, Surat'}/>
-      <CommitteeDetail MemberPost={'National Advisory Committee Members'} MemberName={'DR B.K Sethi'} MemberPostCollege={'Assistant Proffesor, SVNIT, Surat'}/>
-      <CommitteeDetail MemberPost={'International Advisory Committee Members'} MemberName={'DR B.K Sethi'} MemberPostCollege={'Assistant Proffesor, SVNIT, Surat'}/>
-
+    <div className="p-6 max-w-4xl mx-auto">
+      <h1 className="text-2xl font-bold mb-4">Conference Committee Members</h1>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        {committeeMembers.map((category, index) => (
+          <div key={index} className="bg-white shadow-md rounded-2xl p-4">
+            <h2 className="text-lg font-semibold">{category.post}</h2>
+            {category.members.map((member, memberIndex) => (
+              <CommitteeDetail
+                key={memberIndex}
+                MemberPost={category.post}
+                MemberName={member.name}
+                MemberPostCollege={member.college}
+              />
+            ))}
+          </div>
+        ))}
+      </div>
     </div>
-  )
-}
-
-export default Committee; 
+  );
+} 
