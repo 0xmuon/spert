@@ -7,6 +7,12 @@
   color: white;
 }
 
+.navbar-brand {
+  display: flex;
+  align-items: center; /* Center items vertically */
+  flex: 1; /* Allow the brand to take available space */
+}
+
 .navbar-logo {
   width: 150px; /* Adjust the width as needed */
   height: auto; /* Maintain aspect ratio */
@@ -44,6 +50,7 @@
   display: none; /* Hide hamburger by default */
   flex-direction: column;
   cursor: pointer;
+  margin-left: auto; /* Push hamburger to the right */
 }
 
 .hamburger span {

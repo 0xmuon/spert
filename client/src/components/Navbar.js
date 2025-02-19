@@ -13,11 +13,7 @@ function Navbar() {
           alt="SPERT Expanded Logo" 
           className="navbar-logo" 
         />
-        <Link to="/" className="navbar-title">IEEE-SPERT 2025</Link>
         <button className="hamburger" onClick={() => setIsOpen(!isOpen)}>
-          <span></span>
-          <span></span>
-          <span></span>
         </button>
       </div>
       <ul className={`navbar-links ${isOpen ? 'active' : ''}`}>

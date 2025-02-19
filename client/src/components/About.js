@@ -32,7 +32,7 @@ function About() {
             Institute has also established the Centre of Indian Knowledge System and Centre for the Tribal Technology 
             Development.
           </p>
-          <div className="image-container">
+          <div className="">
           <img 
               src={"https://i.ibb.co/84MfjQph/svnit-main-gate.jpg"}
               alt="SVNIT-Main-Gate" 
@@ -45,7 +45,7 @@ function About() {
       <section className="about-section">
         <h2>About Department of Electrical Engineering</h2>
         <div className="content-wrapper">
-          <div className="image-container">
+          <div className="">
             <img 
               src={"https://i.ibb.co/jPNkdgQv/electrical-engg-svnit.jpg"}
               alt="Electrical Engineering Department" 
