@@ -4,19 +4,19 @@ import './VenueContact.css';
 function VenueContact() {
   return (
     <div className="venue-contact">
-      <h1>Venue & Contact</h1>
+      <h1 className="venue-title">Venue & Contact</h1>
       <div className="contact-info">
-        <h2>Contact</h2>
-        <p>
+        <h2 className="contact-header">Contact</h2>
+        <p className="contact-details">
           (IEEE-SPERT 2025)<br />
           Sardar Vallabhbhai National Institute of Technology, Surat<br />
-          <a href="mailto:ieee.sefet.2025@svnit.ac.in">ieee.spert@svnit.ac.in</a><br />
+          <a href="mailto:spert2025@gmail.com" className="contact-email">spert2025@gmail.com</a><br />
           SVNIT, Surat - 395007 (Gujarat) India
         </p>
       </div>
       <div className="venue-info">
-        <h2>Venue</h2>
-        <p>
+        <h2 className="venue-header">Venue</h2>
+        <p className="venue-details">
           Sardar Vallabhbhai National Institute of Technology, Surat: Located in Athwa, Surat, Gujarat 395007, India.
         </p>
         <div className="map-container">
