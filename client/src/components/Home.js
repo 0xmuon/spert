@@ -106,23 +106,23 @@ function Home() {
             </thead>
             <tbody>
               <tr>
-                <td>1st June 2025</td>
-                <td>Paper Submission Deadline</td>
+                <td>31st July 2025</td>
+                <td>Full Paper Submission Deadline</td>
               </tr>
               <tr>
-                <td>15th July 2025</td>
+                <td>15th September 2025</td>
                 <td>Notification of Acceptance</td>
               </tr>
               <tr>
-                <td>1st August 2025</td>
-                <td>Camera Ready Submission</td>
+                <td>15st October 2025</td>
+                <td>Final Paper Submission Deadline</td>
               </tr>
               <tr>
-                <td>19th Dec 2025</td>
+                <td>19th December 2025</td>
                 <td>Conference Begins</td>
               </tr>
               <tr>
-                <td>21st Dec 2025</td>
+                <td>21st December 2025</td>
                 <td>Conference Ends</td>
               </tr>
             </tbody>
