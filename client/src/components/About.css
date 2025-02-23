@@ -13,10 +13,10 @@
 }
 
 .about-title {
-  color: #4CAF50; /* Green color for About Us title */
+  color: #1a4c7c;
   text-align: center;
   font-size: 2.5rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .about-subtitle {
@@ -45,20 +45,22 @@
 
 .about-section {
   margin-bottom: 3rem;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .about-section h2 {
   color: #4CAF50; /* Green color for section headings */
   margin-bottom: 1.5rem;
   font-size: 1.8rem;
-  text-align: left; /* Align headings to the left */
 }
 
 .content-wrapper {
   display: flex;
   flex-direction: column;
   gap: 1.5rem; /* Space between paragraphs */
-  width: 100%; /* Ensure it takes full width */
 }
 
 .content-wrapper p {
@@ -69,16 +71,15 @@
 
 .image-container {
   width: 100%;
-  height: auto;
-  overflow: hidden;
+  margin: 2rem 0;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 }
 
-.campus-image {
+.department-image {
   width: 100%;
   height: auto;
-  object-fit: cover; /* Ensure the image covers the area */
+  object-fit: cover;
 }
 
 .video-container {
@@ -100,19 +101,24 @@
 
 @media (max-width: 768px) {
   .about {
-    padding: 1rem; /* Adjust padding for smaller screens */
+    padding: 1rem;
+    margin: 1rem;
   }
 
   .about-title {
-    font-size: 2rem; /* Smaller title on mobile */
+    font-size: 2rem;
   }
 
   .about-subtitle {
     font-size: 1.5rem;
   }
 
+  .about-section {
+    padding: 1rem;
+  }
+
   .about-section h2 {
-    font-size: 1.5rem; /* Smaller section title on mobile */
+    font-size: 1.5rem;
   }
 
   .image-container {
@@ -122,15 +128,16 @@
 
 @media (max-width: 420px) {
   .about {
-    padding: 1rem; /* Reduce padding for smaller screens */
+    padding: 0.5rem;
+    margin: 0.5rem;
   }
 
   .about-title {
-    font-size: 2rem; /* Smaller title */
+    font-size: 1.8rem;
   }
 
   .about-section h2 {
-    font-size: 1.5rem; /* Smaller section title */
+    font-size: 1.3rem;
   }
 
   .content-wrapper {
@@ -138,6 +145,6 @@
   }
 
   .content-wrapper p {
-    font-size: 0.9rem; /* Smaller paragraph font size */
+    font-size: 0.9rem;
   }
 } 

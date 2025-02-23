@@ -97,36 +97,38 @@ function Home() {
 
         <div className="right-content">
           <h2 className="important-dates-title">Important Dates</h2>
-          <table className="important-dates-table">
-            <thead>
-              <tr>
-                <th>Date</th>
-                <th>Event</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>31st July 2025</td>
-                <td>Full Paper Submission Deadline</td>
-              </tr>
-              <tr>
-                <td>15th September 2025</td>
-                <td>Notification of Acceptance</td>
-              </tr>
-              <tr>
-                <td>15st October 2025</td>
-                <td>Final Paper Submission Deadline</td>
-              </tr>
-              <tr>
-                <td>19th December 2025</td>
-                <td>Conference Begins</td>
-              </tr>
-              <tr>
-                <td>21st December 2025</td>
-                <td>Conference Ends</td>
-              </tr>
-            </tbody>
-          </table>
+          <div className="important-dates-wrapper">
+            <table className="important-dates-table">
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Event</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>31st July 2025</td>
+                  <td>Full Paper Submission Deadline</td>
+                </tr>
+                <tr>
+                  <td>15th September 2025</td>
+                  <td>Notification of Acceptance</td>
+                </tr>
+                <tr>
+                  <td>15th October 2025</td>
+                  <td>Final Paper Submission Deadline</td>
+                </tr>
+                <tr>
+                  <td>19th December 2025</td>
+                  <td>Conference Begins</td>
+                </tr>
+                <tr>
+                  <td>21st December 2025</td>
+                  <td>Conference Ends</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
 

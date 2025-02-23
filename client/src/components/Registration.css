@@ -1,26 +1,50 @@
 .registration-container {
     padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.registration-title {
+    color: #1a4c7c;
     text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.registration-section {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+    margin: 1.5rem 0;
 }
 
 .registration-table {
     width: 100%;
     border-collapse: collapse;
     margin: 1.5rem 0;
+    background-color: white;
 }
 
-.registration-table th, .registration-table td {
+.registration-table th, 
+.registration-table td {
     border: 1px solid #ddd;
-    padding: 8px;
+    padding: 12px;
+    text-align: left;
 }
 
 .registration-table th {
-    background-color: #1a4c7c;
+    background-color: #4CAF50;
     color: white;
 }
 
 .registration-table tr:nth-child(even) {
-    background-color: #f2f2f2;
+    background-color: #f9f9f9;
 }
 
 .registration-note {
@@ -29,9 +53,67 @@
 }
 
 .note-box {
-    background-color: #e7f3fe; /* Light blue background */
-    border: 1px solid #b3d4fc; /* Light blue border */
-    border-radius: 5px; /* Rounded corners */
-    padding: 1rem; /* Padding inside the box */
-    margin: 1rem 0; /* Margin around the box */
+    background-color: #e7f3fe;
+    border: 1px solid #b3d4fc;
+    border-radius: 5px;
+    padding: 1rem;
+    margin: 1rem 0;
+}
+
+.note-title {
+    color: #1a4c7c;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    text-align: left;
+}
+
+.note-list {
+    list-style-type: disc;
+    margin-left: 1.5rem;
+    padding-left: 0;
+}
+
+.note-list li {
+    margin: 0.5rem 0;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .registration-container {
+        padding: 1rem;
+    }
+
+    .registration-title {
+        font-size: 2rem;
+    }
+
+    .registration-section {
+        padding: 1rem;
+    }
+
+    .registration-table th, 
+    .registration-table td {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 420px) {
+    .registration-container {
+        padding: 0.5rem;
+    }
+
+    .registration-title {
+        font-size: 1.8rem;
+    }
+
+    .registration-section {
+        padding: 0.5rem;
+    }
+
+    .registration-table th, 
+    .registration-table td {
+        padding: 6px;
+        font-size: 0.8rem;
+    }
 } 

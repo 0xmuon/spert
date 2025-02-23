@@ -232,10 +232,11 @@
 }
 
 .welcome-title {
-    font-size: 2rem; /* Adjust font size as needed */
-    font-weight: normal; /* Unbold the title */
-    color: #1a4c7c; /* Dark blue color */
-    margin-top: 2rem; /* Space above the title */
+    font-size: 2rem;
+    font-weight: normal;
+    color: #1a4c7c;
+    margin-top: 2rem;
+    text-align: left;
 }
 
 .welcome-description {
@@ -246,19 +247,20 @@
 }
 
 .content-container {
-    display: flex; /* Use flexbox for layout */
-    justify-content: space-between; /* Space between left and right content */
-    margin-top: 2rem; /* Space above the content */
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    margin-top: 2rem;
+    padding: 0 1rem;
 }
 
 .left-content {
-    flex: 2; /* Allow left content to take more space */
-    text-align: left; /* Align text to the left */
+    flex: 2;
 }
 
 .right-content {
-    flex: 1; /* Allow right content to take less space */
-    padding-left: 2rem; /* Space between left and right content */
+    flex: 1;
+    min-width: 300px;
 }
 
 .important-dates-title {
@@ -268,20 +270,40 @@
     color: #4CAF50; /* Green color for the title */
 }
 
-.important-dates-table {
-    width: 100%; /* Full width */
-    border-collapse: collapse; /* Collapse borders */
+.important-dates-wrapper {
+    overflow-x: auto; /* Enable horizontal scrolling if needed */
+    margin: 1rem 0;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.important-dates-table th, .important-dates-table td {
-    border: 1px solid #ddd; /* Border for table cells */
-    padding: 8px; /* Padding for table cells */
-    text-align: left; /* Align text to the left */
+.important-dates-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.important-dates-table th,
+.important-dates-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
 }
 
 .important-dates-table th {
-    background-color: #e8f5e9; /* Light green background for header */
-    color: #4CAF50; /* Dark green text for header */
+    background-color: #4CAF50;
+    color: white;
+    font-weight: 600;
+}
+
+.important-dates-table tr:last-child td {
+    border-bottom: none;
+}
+
+.important-dates-table tr:hover {
+    background-color: #f5f5f5;
 }
 
 .tourist-attractions {
@@ -342,4 +364,77 @@
     color: white; /* Text color */
     font-size: 1.5rem; /* Text size */
     text-align: center; /* Center text */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .content-container {
+        flex-direction: column;
+        padding: 0 0.5rem;
+    }
+
+    .right-content {
+        margin-top: 2rem;
+        width: 100%;
+    }
+
+    .important-dates-wrapper {
+        margin: 0.5rem 0;
+    }
+
+    .important-dates-table {
+        font-size: 0.85rem;
+    }
+
+    .important-dates-table th,
+    .important-dates-table td {
+        padding: 10px 8px;
+    }
+}
+
+@media (max-width: 420px) {
+    .content-container {
+        padding: 0;
+    }
+
+    .important-dates-title {
+        font-size: 1.3rem;
+    }
+
+    .important-dates-table {
+        font-size: 0.8rem;
+    }
+
+    .important-dates-table th,
+    .important-dates-table td {
+        padding: 8px 6px;
+    }
+
+    /* Make the table scrollable horizontally on very small screens */
+    .important-dates-wrapper {
+        margin: 0.5rem -0.5rem;
+        border-radius: 0;
+    }
+}
+
+/* Accessibility Improvements */
+.important-dates-table th {
+    font-weight: 600;
+    color: white;
+}
+
+.important-dates-table tr:focus-within {
+    background-color: #e8f5e9;
+    outline: 2px solid #4CAF50;
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+    .important-dates-table th {
+        background-color: #000;
+    }
+
+    .important-dates-table td {
+        border: 1px solid #000;
+    }
 } 

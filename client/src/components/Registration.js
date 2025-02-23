@@ -53,8 +53,8 @@ function Registration() {
       </table>
       <div className="registration-note">
         <div className="note-box">
-          <p>Note:</p>
-          <ul>
+          <h3 className="note-title">Note:</h3>
+          <ul className="note-list">
             <li>Rates are inclusive of GST 18%</li>
             <li>One full author registration can register up to 2 papers.</li>
           </ul>

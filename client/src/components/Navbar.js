@@ -5,17 +5,28 @@ import './Navbar.css'; // Ensure you have a CSS file for styling
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <nav className="navbar">
       <div className="navbar-brand">
         <img 
           src="https://i.ibb.co/JWhJB86S/SPERT2025.png" 
-          alt="SPERT Expanded Logo" 
+          alt="SPERT 2025 Logo"  
           className="navbar-logo" 
         />
-        <button className="hamburger" onClick={() => setIsOpen(!isOpen)}>
-        </button>
+        <Link to="/" className="navbar-title">IEEE-SPERT 2025</Link>
       </div>
+      <button 
+        className={`hamburger ${isOpen ? 'active' : ''}`} 
+        onClick={toggleMenu}
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
       <ul className={`navbar-links ${isOpen ? 'active' : ''}`}>
         <li><Link to="/" onClick={() => setIsOpen(false)}>Home</Link></li>
         <li><Link to="/about" onClick={() => setIsOpen(false)}>About Us</Link></li>
